@@ -1,0 +1,153 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+/* CSS Variables for a Cohesive Color Palette */
+:root {
+  --primary-color: #4f46e5;      /* Indigo */
+  --primary-hover: #4338ca;
+  --bg-color: #f8fafc;           /* Light grey background */
+  --card-bg: #ffffff;            /* White card background */
+  --text-main: #1e293b;          /* Dark slate for text */
+  --text-muted: #64748b;         /* Muted grey for labels */
+  --border-color: #e2e8f0;       /* Border grey */
+  --table-alt-row: #f1f5f9;      /* Alternating row color */
+}
+
+/* Base Styles & Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+}
+
+/* Layout Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card Styling (Box Model Application) */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Page Heading Banner */
+header.card {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  border: none;
+}
+
+header.card h1 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+header.card p {
+  color: #e0e7ff;
+}
+
+/* Form & Input Styling */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Button Styling */
+button, .btn {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Expense Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+th:first-child {
+  border-top-left-radius: 8px;
+}
+
+th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+  background-color: var(--table-alt-row);
+}
+
+tbody tr:hover {
+  background-color: #e2e8f0;
+}
